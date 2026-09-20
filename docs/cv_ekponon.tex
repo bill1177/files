@@ -1,0 +1,274 @@
+%!TEX program = pdflatex
+% ---------------------------------------------------------------
+%  Adelphe Ekponon -- Academic CV
+%  Redesigned layout, September 2026
+% ---------------------------------------------------------------
+\documentclass[11pt,a4paper]{article}
+
+% ----------------------------- Packages -----------------------------
+\usepackage[a4paper,left=1.9cm,right=1.9cm,top=1.6cm,bottom=1.8cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{mathpazo}   % Palatino-like text/math font, works with plain pdflatex
+
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{paracol}
+\usepackage[skip=4pt]{parskip}
+\usepackage{ragged2e}
+
+% ----------------------------- Colours -----------------------------
+\definecolor{accent}{HTML}{7A1F2B}   % deep burgundy - academic, understated
+\definecolor{darktext}{HTML}{1F1F1F}
+\definecolor{midtext}{HTML}{4A4A4A}
+\definecolor{rulegray}{HTML}{BEBEBE}
+
+\color{darktext}
+
+% ----------------------------- Hyperref -----------------------------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  citecolor=accent,
+  pdftitle={Adelphe Ekponon - Curriculum Vitae},
+  pdfauthor={Adelphe Ekponon}
+}
+
+% ----------------------------- Section styling -----------------------------
+\titleformat{\section}
+  {\normalfont\bfseries\Large\color{accent}}
+  {}{0em}{}
+  [\vspace{-2pt}{\color{rulegray}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+
+\titleformat{\subsection}
+  {\normalfont\bfseries\itshape\color{darktext}}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{8pt}{3pt}
+
+\setlength{\parindent}{0pt}
+
+% ----------------------------- Custom commands -----------------------------
+% Entry with a left-hand date/label column and right-hand description
+\newcommand{\cvcolwidth}{2.9cm}
+\newcommand{\cvline}[2]{%
+  \par\noindent
+  \makebox[\cvcolwidth][l]{\textbf{\small #1}}%
+  \begin{minipage}[t]{\dimexpr\linewidth-\cvcolwidth-4pt\relax}
+  \small #2
+  \end{minipage}\par\vspace{2pt}%
+}
+
+\newcommand{\cvlinenodate}[1]{%
+  \par\noindent
+  \makebox[\cvcolwidth][l]{}%
+  \begin{minipage}[t]{\dimexpr\linewidth-\cvcolwidth-4pt\relax}
+  \small #1
+  \end{minipage}\par\vspace{1pt}%
+}
+
+% Publication entry
+\newcommand{\pubentry}[4]{%
+  \noindent{\small \href{#2}{#1}.}\par
+  {\small\color{midtext} #3}\par
+  {\small\bfseries\itshape #4}\par
+  \vspace{5pt}
+}
+
+\newcommand{\wpentry}[4]{%
+  \noindent{\small \href{#2}{#1}, #3.}\par
+  {\small\color{midtext} #4}\par
+  \vspace{5pt}
+}
+
+\newcommand{\sectiongap}{\vspace{4pt}}
+
+% ----------------------------- Document -----------------------------
+\begin{document}
+\pagestyle{empty}
+
+% ================= HEADER =================
+\begin{minipage}[t]{0.62\linewidth}
+  {\fontsize{20}{24}\selectfont\bfseries\color{darktext} Adelphe Ekponon}\\[4pt]
+  {\small\color{midtext}
+  Telfer School of Management\\
+  University of Ottawa\\
+  55 Laurier Ave. E, Ottawa, ON K1N 6N5, Canada}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.35\linewidth}
+  \vspace*{18pt}
+  \raggedleft
+  \small
+  Email: \ \href{mailto:ekponon@telfer.uottawa.ca}{ekponon@telfer.uottawa.ca}\\[2pt]
+  Web: \ \href{https://adelpheekponon.com/}{adelpheekponon.com}\\[2pt]
+  \ \href{https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2900033}{SSRN author page}
+\end{minipage}
+
+\vspace{6pt}
+{\color{accent}\rule{\linewidth}{1.4pt}}
+\vspace{2pt}
+
+% ================= ACADEMIC POSITION =================
+\section*{Academic Position}
+\cvline{2025 -- present}{Associate Professor of Finance, Telfer School of Management, University of Ottawa}
+\cvline{2022 -- 2025}{Assistant Professor of Finance, Telfer School of Management, University of Ottawa}
+\cvline{2020 -- 2022}{Assistant Professor of Finance, University of Liverpool Management School}
+\cvline{2018 -- 2020}{Postdoctoral Research Associate, University of Cambridge -- Judge Business School\\
+\hspace*{0pt}\textit{Cambridge Endowment for Research in Finance (CERF) -- Director: Bart Lambrecht}}
+
+% ================= VISITING POSITIONS =================
+\section*{Visiting Positions}
+\cvline{Mar.--Sep. 2018}{Visiting Assistant Professor, HEC Li\`ege Management School, University of Li\`ege}
+\cvline{Fall 2017}{Visiting Ph.D. Student, Boston College}
+\cvline{Spring 2017}{Visiting Ph.D. Student, University of Toronto}
+
+% ================= EDUCATION =================
+\section*{Educational Background}
+\cvline{2012 -- 2018}{Ph.D. in Finance -- HEC Montr\'eal (joint program with McGill, Concordia, and UQAM)\\
+\hspace*{0pt}\textit{Thesis: ``Essays on Macroeconomic Risk and Asset Pricing''}\\
+\hspace*{0pt}\textit{Adviser: Alexandre Jeanneret}\\
+\hspace*{0pt}\textit{Examiner: Rom\'eo T\'edongap, ESSEC Business School}\\
+\hspace*{0pt}\textit{Members: Christian Dorion, Hafedh Bouakez, and Philippe d'Astous}}
+\cvline{2010 -- 2011}{M.Sc. in Aerospace Engineering -- Universit\'e Laval (joint program with McGill, Polytechnique Montr\'eal, Concordia)}
+\cvline{2006 -- 2007}{M.Sc. in Finance and Statistics -- Sorbonne University}
+\cvline{2003 -- 2006}{M.Sc. in Engineering -- Institut Polytechnique de Paris}
+
+% ================= RESEARCH INTERESTS =================
+\section*{Research Interests}
+\small Asset Pricing \ $\cdot$ \ Macro-Finance \ $\cdot$ \ Corporate Finance \ $\cdot$ \ FinTech \ $\cdot$ \ Cryptocurrency
+
+\section*{Publications}
+\pubentry{Credit Efficiency: Another Early Warning Indicator for Systemic Risk}
+{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3571998}
+{with C.\ Tang, U. of Edinburgh Business School}
+{Research in International Business and Finance, 81, 103192, 2026}
+
+\pubentry{Are Cryptocurrencies Priced in the Cross-section? A Portfolio Approach}
+{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3571998}
+{with K.\ Assamoi and Z.\ Guo}
+{Finance Research Letters, 71, 106437, 2025}
+
+\pubentry{Sovereign Risk Premia and Global Macroeconomic Conditions}
+{https://www.sciencedirect.com/science/article/pii/S0304405X22001489}
+{with A.\ Jeanneret and S.\ Andrade}
+{Journal of Financial Economics, 147(1), 172--197, 2023}
+
+\section*{Working Papers}
+\wpentry{What Drives Expected Stock Returns? Long-Run Risk and Endogenous Leverage}
+{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3116235}{2020}
+{with C.\ Dorion and A.\ Jeanneret}
+
+\noindent{\small \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3440168}{Corporate Governance and Long-Run Risk Premia}, 2025.}\par
+{\small\bfseries\itshape R\&R, Financial Management}\par
+\vspace{5pt}
+
+\wpentry{Are Cryptocurrencies Exposed to Traditional Factor Risk?}
+{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4595563}{2026}
+{with G.\ Akbari, K.\ Assamoi, and Z.\ Guo}
+
+\wpentry{Innovation Failure and CEO Compensation Packages}
+{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5056263}{2026}
+{with I.\ Chkir, R. Elkamhi, and O.\ Zidan}
+
+\wpentry{Corporate Innovation, Macroeconomic Risk, and Stock Returns}
+{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5056208}{2026}
+{with I.\ Chkir, H.\ Som\'e, and O.\ Zidan}
+
+% ================= CONFERENCES =================
+\section*{Conferences and Seminars \normalfont\normalsize\itshape (including posters; * presented by co-author)}
+\small
+\cvline{2026}{International Risk Management Conference (IRMC, x2), World Finance Conference (WFC, x3), International Conference on Cognitive Computing, Intelligence, and Data Science Applications (2026), the World Finance Conference, and the AI in Finance Conference, American Economic Association (x2, forthcoming)}
+\cvline{2025}{Southwestern Finance Association (Texas, USA); Financial Management Association (Vancouver, BC, Canada, x3), Canadian Economic Association (CEA), Sydney Banking and Financial Stability Conference (SBFC)}
+\cvline{2024}{Financial Management Association (Texas, USA)}
+\cvline{2023}{American Economic Association (Louisiana, USA); Financial Management Association (Chicago, USA)}
+\cvline{2022}{University of Cambridge (CERF Cavalcade); CERF Alumni Society}
+\cvline{2021}{University of Ottawa; International French Finance Conference; Global Finance Conference (x2); Financial Markets \& Corporate Governance Conference (Australia); Financial Management Association (New York)}
+\cvline{2020}{American Economic Association (San Diego, USA); Cambridge Finance Workshop, University of Liverpool; Financial Management Association (Denver)}
+\cvline{2019}{University of Cambridge (Judge Business School, UK); Asset Pricing Workshop (University of York, UK); Financial Management Association (New Orleans, USA); Northern Finance Association (Vancouver, Canada)*}
+\cvline{2018}{Laval University (Canada); HEC Management School -- University of Li\`ege; French Finance Association Meeting; Belgian Financial Research Forum (Brussels); Chinese University of Hong Kong (CUHK)*; HEC Montreal (Canada); University of Cambridge (CERF Seminars)}
+\cvline{2017}{Babson College (Massachusetts); HEC--McGill Doctoral Workshop (McGill University); Ph.D.\ Seminar (University of Toronto -- Rotman); HEC Montreal (Canada)}
+\cvline{2016}{McGill Doctoral Workshop (Montreal, Canada); Annual Conference of the Swiss Society for Financial Market Research (Zurich, Switzerland)*; HEC--McGill Winter Finance Workshop (Fernie, Canada)*; European Finance Association (Oslo, Norway)*; Sherbrooke University (Canada)}
+
+% ================= AWARDS =================
+\section*{Awards, Grants \& Fellowships}
+\small
+\cvline{2024}{SSHRC Insight Development Grant -- \$66,500}
+\cvline{2023}{University of Ottawa (SEED Funding) -- \$10,000}
+\cvline{2023}{Telfer School of Management Research Grants (SMRG) -- \$10,000}
+\cvline{2022}{New Faculty Start-up Fund, Telfer School of Management, University of Ottawa -- \$40,000}
+\cvline{2022}{Teaching Award, University of Liverpool Management School}
+\cvline{2021}{Best Paper Award, Global Finance Conference}
+\cvline{2020}{Best Paper Award in Corporate Finance, Semi-finalist, FMA}
+\cvline{2019}{Best Paper Award in Investment, Semi-finalist, FMA}
+\cvline{2018}{Ph.D.\ Fellowship, Canada Research Chair in Macro-Finance, HEC Montreal -- \$5,000}
+\cvline{2017}{Ph.D.\ Fellowship, Research Group in Economics and Finance, HEC Montreal -- \$5,000}
+\cvline{2015}{Ph.D.\ Fellowship for Excellence, Daniel Brosseau and Peter Letko, HEC Montreal -- \$25,000}
+\cvline{2014}{Ph.D.\ Fellowship, Canada Research Chair in Risk Management, HEC Montreal -- \$2,500}
+\cvline{2012}{Ph.D.\ Entrance Fellowship, HEC Montreal -- \$10,000}
+\cvline{2011}{M.Sc.\ Fellowship, Canada Research Chair for Aircraft Modeling and Simulation Technologies, Montreal -- \$5,000}
+\cvline{2006}{Laureate of the National Bureau for Technical Studies and Development (BNETD), C\^ote d'Ivoire}
+\cvline{2004}{M.Sc.\ Fellowship for Excellence, Centre for Aerospace Manpower Activities in Quebec, Montreal}
+\cvline{1999}{B.Sc.\ Award of Excellence, Government of Tunisia}
+\cvline{1998}{B.Sc.\ Fellowship for Excellence, Bilateral cooperation between C\^ote d'Ivoire and Tunisia}
+\cvline{1994}{National best grade in Mathematics, End-of-Middle-School exam, C\^ote d'Ivoire}
+
+% ================= TEACHING =================
+\section*{Teaching}
+\cvline{2022 --}{Econometrics (M.Sc.), FinTech (B.Sc.), Finance Theory (B.Sc.), Financial Management (B.Sc.), Asset Pricing (Ph.D.) -- Telfer School of Management, University of Ottawa}
+\cvline{2021--22}{Project in Finance (B.Sc.) -- University of Liverpool}
+\cvline{2020}{Quantitative Business Finance (B.Sc.) -- University of Liverpool}
+\cvline{2018}{Applied Financial Instruments (B.Sc.) and Financial Derivatives (M.Sc.) -- HEC Li\`ege}
+\cvline{2015}{Corporate Finance (B.Sc.) -- HEC Montreal (Winter and Fall)}
+
+\subsection*{Teaching Associate / Assistant}
+\cvline{Winter 2020}{Corporate Finance / Options, Futures and Other Derivatives (MPhil, University of Cambridge -- Judge Business School)}
+\cvline{Fall 2019}{Corporate Finance (MBA, University of Cambridge -- Judge Business School)}
+\cvline{2019--20}{Behavioural Finance (MBA, University of Cambridge -- Judge Business School) -- Winter terms}
+\cvline{2014--15}{International Portfolio Management (M.Sc., HEC Montr\'eal) -- Fall terms}
+\cvline{2014--15}{Optimization and Modeling / Maths for Graduate Studies and Operational Research (Undergraduate and M.Sc., HEC Montr\'eal) -- Fall 2014 and Winter 2015}
+
+% ================= SUPERVISION =================
+\section*{Supervision}
+\cvline{2022--23}{Telfer School of Management, University of Ottawa: 2 M.Sc.\ in Finance}
+\cvline{2020--2022}{University of Liverpool Management School: 16 M.Sc.\ and 4 Bachelor's in Finance}
+\cvline{2018}{HEC School of Management, University of Li\`ege: 4 M.Sc.\ in Finance}
+
+% ================= PROFESSIONAL ACTIVITIES =================
+\section*{Professional Activities}
+\subsection*{Program Committee}
+\small Western Finance Association (WFA) \par
+Conference of the Financial Intermediation Research Society (FIRS) \par
+Corporate Finance Theory Symposium (Cambridge University)
+
+\subsection*{Referee}
+\small Journal of Banking and Finance, Journal of Economic Behavior and Organization, Journal of Economics and Business, Journal of International Management, African Development Review
+
+\subsection*{Member}
+\small Financial Management Association International, American Economic Association, American Finance Association, European Finance Association
+
+% ================= PAPER DISCUSSIONS =================
+\section*{Paper Discussions}
+\cvlinenodate{\textit{On the (Almost) Stochastic Dominance of Cryptocurrency Factor Portfolios and Implications for Cryptocurrency Asset Pricing} (Global Finance Conference, 2021) -- W.\ Han, D.\ Newton, E.\ Platanakis, C.\ Sutcliffe, and X.\ Ye}
+\sectiongap
+\cvlinenodate{\textit{The Value of Investor Sophistication} (AFFI Meeting 2021) -- Chengbo Fu, Gady Jacoby, Nanying Lin, and Lei Lu}
+\sectiongap
+\cvlinenodate{\textit{Wage Growth and Equity Risk Premia} (FMA 2019) -- Paulo Maio and Byoung-Kyu Min}
+\sectiongap
+\cvlinenodate{\textit{Debt, Innovation, and Growth} (Cambridge--Lausanne Workshop 2019) -- Thomas Geelen, Jakub Hajda, and Erwan Morellec}
+\sectiongap
+\cvlinenodate{\textit{Consumption Fluctuations and Expected Returns} (AFFI Meeting 2018) -- Victoria Atanasov, Stig Vinther M\o ller, and Richard Priestley}
+
+% ================= OTHER PROFESSIONAL ACTIVITIES =================
+\section*{Professional Activities (Prior to Academia)}
+\cvline{2008 -- 2010}{Principal Analyst and Project Manager, National Bank of Investments -- BNI (C\^ote d'Ivoire)}
+\cvline{2007 -- 2009}{Senior Analyst, National Bureau for Technical Studies and Development -- BNETD (C\^ote d'Ivoire)}
+\cvline{2006 ($\sim$1 yr)}{Assistant Project Manager, Department of Information Systems, Air Liquide (Paris, France)}
+
+\end{document}
